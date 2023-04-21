@@ -46,5 +46,16 @@ namespace GameSix
             string NewName = name.Replace(" ", "");
             return NewName;
         }
+
+        public enum  PowerUp: float
+        {
+            health,
+            shield,
+        }
+
+        public float PickupPowerUp()
+        {
+
+        }
     }
 }
