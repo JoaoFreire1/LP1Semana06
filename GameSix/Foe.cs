@@ -64,6 +64,16 @@ namespace GameSix
             {
                 shield = shield + y;
             }
+
+            if (health == 100);
+            {
+                health = 99;
+            }
+
+            if (shiedl == 100);
+            {
+                shield = 99;
+            }
         }
     }
 }
