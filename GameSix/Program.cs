@@ -6,7 +6,16 @@ namespace GameSix
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("ijbhikb");
+            Console.WriteLine("Please input a number of enemies");
+            int N_enemy = Convert.ToInt32(Console.ReadLine());
+            Foe[]enemies;
+            for (int i = 0; i < N_enemy; i++)
+            {
+                Console.WriteLine("Write the enemy's name please");
+                string enemyName = Console.ReadLine();
+                string enemyName = enemies[i];
+            }
+
         }
     }   
 }
