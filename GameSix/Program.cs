@@ -16,6 +16,7 @@ namespace GameSix
                 enemies[i] = new Foe(enemyName);
             }
 
+
         }
     }   
 }

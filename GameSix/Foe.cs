@@ -70,7 +70,7 @@ namespace GameSix
                 health = 99;
             }
 
-            if (shiedl == 100);
+            if (shield == 100);
             {
                 shield = 99;
             }
