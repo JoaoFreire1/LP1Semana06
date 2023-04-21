@@ -4,7 +4,7 @@ namespace GameSix
 {
     public class Program
     {
-        static Main()
+        static void Main(string[] args)
         {
             Console.WriteLine("ijbhikb");
         }

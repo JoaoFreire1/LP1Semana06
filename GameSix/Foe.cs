@@ -19,7 +19,7 @@ namespace GameSix
             return name;
         }
 
-        void TakeDamage()
+        void TakeDamage(float damage)
         {
             shield -= damage;
             if (shield < 0)
