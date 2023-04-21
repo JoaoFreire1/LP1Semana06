@@ -47,15 +47,23 @@ namespace GameSix
             return NewName;
         }
 
-        public enum  PowerUp: float
+        public enum  PowerUp 
         {
             health,
             shield,
         }
 
-        public float PickupPowerUp()
+        public float PickupPowerUp(PowerUp x, float y)
         {
+            if (x == PowerUp.health)
+            {
+                health = health + y;
+            }
 
+            else 
+            {
+                shield = shield + y;
+            }
         }
     }
 }
