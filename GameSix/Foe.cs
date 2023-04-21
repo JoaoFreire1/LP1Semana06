@@ -53,7 +53,7 @@ namespace GameSix
             shield,
         }
 
-        public float PickupPowerUp(PowerUp x, float y)
+        public void PickupPowerUp(PowerUp x, float y)
         {
             if (x == PowerUp.health)
             {
