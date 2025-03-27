@@ -7,6 +7,7 @@ namespace MyGame
 {
     public class Enemy
     {
+        public static int pupCount;
         private string name;
         private float health;
         private float shield;
@@ -16,6 +17,11 @@ namespace MyGame
             SetName(name);
             health = 100;
             shield = 0;
+        }
+
+        static Enemy()
+        {
+            pupCount = 0;
         }
 
         public string GetName()
@@ -41,6 +47,8 @@ namespace MyGame
                 this.name = name.Substring(0, 8);   
         }
 
+        public static int GetPowerupCount() => pupCount;
+
         public void TakeDamage (float damage)
         {
             shield -= damage;
@@ -50,6 +58,28 @@ namespace MyGame
                 shield = 0;
                 health -= damageStillToInflict;
                 if (health < 0) health = 0;
+            }
+        }
+
+        public void ShowEnemy()
+        {
+            Console.WriteLine($"{GetName()} {GetHealth()} {GetShield()}");
+        }
+
+        public void PickupPowerUp(PowerUp pup, float value)
+        {
+            pupCount++;
+            if (pup == PowerUp.Health)
+            {
+                health += value;
+                if (health > 100 ) 
+                    health = 100;
+            }
+            else if (pup == PowerUp.Shield)
+            {
+                shield += value;
+                if (shield > 100 ) 
+                    shield = 100;
             }
         }
     }
