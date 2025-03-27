@@ -33,6 +33,20 @@ namespace MyGame
             return shield;
         }
 
+        public string SetName()
+        {
+            foreach (char l in name)
+            {
+                int i = 0;
+                if (i >= 8)
+                    {
+                        string modifiedname += name[i];
+                        i++;
+                    }
+            }
+            return modifiedname;
+        }
+
         public void TakeDamage (float damage)
         {
             shield -= damage;
