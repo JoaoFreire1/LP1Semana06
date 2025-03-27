@@ -37,14 +37,14 @@ namespace MyGame
         {
             foreach (char l in name)
             {
-                int i = 0;
-                if (i >= 8)
+                string modname;
+                for (int i = 0; i >= 8; i++)
                     {
-                        string modifiedname += name[i];
+                        modname += name[i];
                         i++;
                     }
             }
-            return modifiedname;
+            return modname;
         }
 
         public void TakeDamage (float damage)
