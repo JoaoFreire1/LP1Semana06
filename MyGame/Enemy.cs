@@ -13,7 +13,7 @@ namespace MyGame
 
         public Enemy (string name)
         {
-            this.name = name;
+            SetName(name);
             health = 100;
             shield = 0;
         }
@@ -35,16 +35,10 @@ namespace MyGame
 
         public string SetName()
         {
-            foreach (char l in name)
-            {
-                string modname;
-                for (int i = 0; i >= 8; i++)
-                    {
-                        modname += name[i];
-                        i++;
-                    }
-            }
-            return modname;
+            if (name.Length < 8)
+                this.name = name;
+            else
+                this.name = name.Substring(0, 8);   
         }
 
         public void TakeDamage (float damage)
