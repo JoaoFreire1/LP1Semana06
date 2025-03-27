@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Thread;
+using System.Threading;
 
 namespace Chronos
 {
@@ -15,7 +15,7 @@ namespace Chronos
             Thread.Sleep(250);
             crono1.Stop();
             crono2.Stop();
-            Console.Writeline(crono1, crono2);
+            Console.Writeline(crono1);
         }
     }
 }
