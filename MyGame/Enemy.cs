@@ -23,6 +23,18 @@ namespace MyGame
             return name;
         }
 
+        public string GetHealth()
+        {
+            string health2 = Convert.ToString(health);
+            return health2;
+        }
+
+        public string GetShield()
+        {
+            string shield2 = Convert.ToString(shield);
+            return shield2;
+        }
+
         public void TakeDamage (float damage)
         {
             shield -= damage;
