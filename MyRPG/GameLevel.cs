@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using Humanizer;
 
 namespace MyRPG
 {
@@ -11,6 +12,7 @@ namespace MyRPG
     {
         int room;
         Hardness dif;
+        Enemy name;
         public GameLevel(int room, Hardness dif)
         {
             this.room[] = new int [room];
@@ -38,7 +40,7 @@ namespace MyRPG
 
         public void PrintEnemies()
         {
-            
+            Console.WriteLine($"Room: {room.ToRoman()} : {enemy}");
         }
     }
 }
