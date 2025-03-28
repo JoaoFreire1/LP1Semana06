@@ -33,14 +33,14 @@ namespace MyRPG
             return room;
         }
 
-        public void SetEnemyInRoom(int room, Enemy enemy)
+        public void SetEnemyInRoom(int room, Enemy name)
         {
-            Console.WriteLine($"Room: {room.ToRoman()} : {enemy}");
+            Console.WriteLine($"Room: {room.ToRoman()} : {name}");
         }
 
         public void PrintEnemies()
         {
-            Console.WriteLine($"Room: {room.ToRoman()}");
+            Console.WriteLine($" ");
         }
     }
 }
