@@ -15,7 +15,7 @@ namespace MyRPG
         Enemy name;
         public GameLevel(int room, Hardness dif)
         {
-            this.room[] = new int [room];
+            this.room = room;
             this.dif = dif;
         }
         public int GetNumRooms()
@@ -28,19 +28,19 @@ namespace MyRPG
             return dif;
         }
 
-        public object GetNumEnemies()
+        public int GetNumEnemies()
         {
-            return enemy;
+            return room;
         }
 
         public void SetEnemyInRoom(int room, Enemy enemy)
         {
-            [room] = enemy;
+            Console.WriteLine($"Room: {room.ToRoman()} : {enemy}");
         }
 
         public void PrintEnemies()
         {
-            Console.WriteLine($"Room: {room.ToRoman()} : {enemy}");
+            Console.WriteLine($"Room: {room.ToRoman()}");
         }
     }
 }

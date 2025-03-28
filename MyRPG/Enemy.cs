@@ -14,7 +14,7 @@ namespace MyRPG
 
         public Enemy (string name)
         {
-            SetName(name);
+            //SetName(name);
             health = 100;
             shield = 0;
         }
@@ -45,6 +45,8 @@ namespace MyRPG
                 this.name = name;
             else
                 this.name = name.Substring(0, 8);   
+
+            return name;
         }
 
         public static int GetPowerupCount() => pupCount;
@@ -66,21 +68,22 @@ namespace MyRPG
             Console.WriteLine($"{GetName()} {GetHealth()} {GetShield()}");
         }
 
-        public void PickupPowerUp(PowerUp pup, float value)
-        {
-            pupCount++;
-            if (pup == PowerUp.Health)
-            {
-                health += value;
-                if (health > 100 ) 
-                    health = 100;
-            }
-            else if (pup == PowerUp.Shield)
-            {
-                shield += value;
-                if (shield > 100 ) 
-                    shield = 100;
-            }
-        }
+        
+        //public void PickupPowerUp(PowerUp pup, float value)
+        //{
+            //pupCount++;
+            //if (pup == PowerUp.Health)
+            //{
+                //health += value;
+                //if (health > 100 ) 
+                    //health = 100;
+            //}
+            //else if (pup == PowerUp.Shield)
+            //{
+                //shield += value;
+                //if (shield > 100 ) 
+                    //shield = 100;
+            //}
+        //}
     }
 }
